@@ -6,6 +6,6 @@ Convert currencies displayed on ChitChat with this user script to dollars in USD
 
 ## Install Tampermonkey
 
-## Get API Key, replace '<api key here>' with your API Key
+## Get API Key, replace <api key here> with your API Key
 
 ## Add UserScript chitchats.js to Tampermonkey
