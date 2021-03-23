@@ -8,7 +8,7 @@
 // @grant        none
 // ==/UserScript==
 const url = 'https://free.currconv.com/api/v7/convert?q=USD_CAD&compact=ultra&apiKey='
-const api_key = '<your api key>'
+const api_key = '<api key here>'
 const currencyUrl = url+api_key;
 
 var USDtoCAD = 0
@@ -31,11 +31,11 @@ async function convertCurrencies() {
         const cellValue = currencyDataCellInUSD.textContent
         if(cellValue != NaN) {
             const convertedValue = cellValue.replace('$','')
-            console.log("numbers", convertedValue, USDtoCAD)
-            const CADValue = (convertedValue / USDtoCAD ).toFixed(2)
-            var CADValueComponent = document.createElement('div');
-            CADValueComponent.textContent = '$CAD ' + CADValue;
-            currencyDataCellInUSD.appendChild(CADValueComponent)
+
+            const USDValue = (convertedValue / USDtoCAD ).toFixed(2)
+            var USDValueComponent = document.createElement('div');
+            USDValueComponent.textContent = '$USD ' + USDValue;
+            currencyDataCellInUSD.appendChild(USDValueComponent)
         }
     }
 }
